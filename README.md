@@ -2,3 +2,4 @@ It is a website where startups, remote teams, and professionals who need tempora
 
 Contributors:
 Oluwaseun Okunola <oluwaseunokunola@gmail.com>
+Mohammed Jamil Isah <mohammedjamil2050@gmail.com>
