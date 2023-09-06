@@ -1,4 +1,6 @@
-from workspace import app
+from workspace import create_app
+
+app = create_app()
 
 if __name__ == '__main__':
     app.run(debug=True)
