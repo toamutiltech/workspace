@@ -37,8 +37,18 @@ class User(db.Model, UserMixin):
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
+    location = db.Column(db.String(255), nullable=False)
+    country = db.Column(db.String(255), nullable=False)
+    size = db.Column(db.String(100), nullable=False)
+    space_type = db.Column(db.String(255), nullable=False)
+    accommodation_size = db.Column(db.String(100), nullable=False)
+    facility = db.Column(db.Text, nullable=False)
+    price = db.Column(db.String(100), nullable=False)
+    contact = db.Column(db.Text, nullable=False)
+    availability = db.Column(db.String(255), nullable=False)
+    image = db.Column(db.String(100), nullable=False, default='default.jpg')
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    content = db.Column(db.Text, nullable=False)
+    description = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):

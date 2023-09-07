@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-  <article class="media content-section">
+  <article class="media content-section topbar">
     <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
     <div class="media-body">
       <div class="article-metadata">
@@ -14,7 +14,18 @@
         {% endif %}
       </div>
       <h2 class="article-title">{{ post.title }}</h2>
-      <p class="article-content">{{ post.content }}</p>
+      <img class="space-img" src="{{ url_for('static', filename='space_image/' + post.image) }}">
+  <p class="article-content">{{ post.price}}</p>
+      <p class="article-content">{{ post.location }}</p>
+      <p class="article-content">{{ post.country }}</p>
+      <p class="article-content">{{ post.size }}</p>
+      <p class="article-content">{{ post.space_type }}</p>
+      <p class="article-content">{{ post.accommodation_size }}</p>
+      <p class="article-content">{{ post.facility }}</p>
+      <p class="article-content">{{ post.accommodation_size }}</p>
+      <p class="article-content">{{ post.availability }}</p>
+      <p class="article-content">{{ post.description }}</p>
+      <p class="article-content">{{ post.contact }}</p>
     </div>
   </article>
   <!-- Modal -->

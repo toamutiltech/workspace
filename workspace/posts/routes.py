@@ -1,9 +1,10 @@
 from flask import (render_template, url_for, flash,
                    redirect, request, abort, Blueprint)
 from flask_login import current_user, login_required
-from workspace import db
-from workspace.models import Post
+from workspace import db, bcrypt
+from workspace.models import User, Post
 from workspace.posts.forms import PostForm
+from workspace.posts.utils import save_picture
 
 posts = Blueprint('posts', __name__)
 
@@ -13,7 +14,10 @@ posts = Blueprint('posts', __name__)
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(title=form.title.data, content=form.content.data, author=current_user)
+        if form.image.data:
+            image_file = save_picture(form.image.data)
+            
+        post = Post(title=form.title.data, description=form.description.data, size=form.size.data, location=form.location.data, country=form.country.data, image = image_file, price=form.price.data, space_type=form.space_type.data, availability=form.availability.data, facility=form.facility.data, contact=form.contact.data,  author=current_user)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')

@@ -2,7 +2,7 @@
 {% block content %}
     <h1 class="mb-3">Posts by {{ user.username }} ({{ posts.total }})</h1>
     {% for post in posts.items %}
-        <article class="media content-section">
+        <article class="media content-section topbar">
           <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
           <div class="media-body">
             <div class="article-metadata">
@@ -10,7 +10,18 @@
               <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
             <h2><a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
+            <img class="space-img" src="{{ url_for('static', filename='space_image/' + post.image) }}">
+  <p class="article-content">{{ post.price}}</p>
+      <p class="article-content">{{ post.location }}</p>
+      <p class="article-content">{{ post.country }}</p>
+      <p class="article-content">{{ post.size }}</p>
+      <p class="article-content">{{ post.space_type }}</p>
+      <p class="article-content">{{ post.accommodation_size }}</p>
+      <p class="article-content">{{ post.facility }}</p>
+      <p class="article-content">{{ post.accommodation_size }}</p>
+      <p class="article-content">{{ post.availability }}</p>
+      <p class="article-content">{{ post.description }}</p>
+      <p class="article-content">{{ post.contact }}</p>
           </div>
         </article>
     {% endfor %}
