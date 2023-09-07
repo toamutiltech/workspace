@@ -126,3 +126,7 @@ a.article-title:hover {
     grid-template-columns: repeat(3, 1fr); /* Three columns */
     grid-gap: 20px; /* Adjust the gap between posts */
 }
+#footer{
+    color: white;
+    text-align: center;
+}

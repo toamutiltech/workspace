@@ -53,3 +53,14 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+
+class Contact(db.Model):
+    msg_id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(255), nullable=False)
+    number = db.Column(db.String(255), nullable=False)
+    email = db.Column(db.String(255), nullable=False)
+    msg = db.Column(db.Text, nullable=False)   
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+
+    def __repr__(self):
+        return f"Post('{self.title}', '{self.msg}')"
