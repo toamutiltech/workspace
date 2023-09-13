@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationE
 from flask_login import current_user
 from workspace.models import User
 
-
+#The form to post space to the database
 class PostForm(FlaskForm):
     choices = [('Nigeria', 'Nigeria'), ('Argentina', 'Argentina'), 
     ('Algeria', 'Algeria'), ('Benin', 'Benin'),('Brazil', 'Brazil'), 

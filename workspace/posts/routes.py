@@ -8,7 +8,7 @@ from workspace.posts.utils import save_picture
 
 posts = Blueprint('posts', __name__)
 
-
+#Route to submit the post form and redirect back to create post
 @posts.route("/post/new", methods=['GET', 'POST'])
 @login_required
 def new_post():
@@ -25,13 +25,13 @@ def new_post():
     return render_template('create_post.html', title='New Post',
                            form=form, legend='New Post')
 
-
+#Route to view space post by the ID
 @posts.route("/post/<int:post_id>")
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
 
-
+#Route to edit space post by the ID
 @posts.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required
 def update_post(post_id):
@@ -51,7 +51,7 @@ def update_post(post_id):
     return render_template('create_post.html', title='Update Post',
                            form=form, legend='Update Post')
 
-
+#Route to delete space post by the ID
 @posts.route("/post/<int:post_id>/delete", methods=['POST'])
 @login_required
 def delete_post(post_id):

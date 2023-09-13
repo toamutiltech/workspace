@@ -1,3 +1,4 @@
+#configuration details
 import os
 
 
@@ -7,4 +8,4 @@ class Config:
     MAIL_PORT = 587
     MAIL_USE_TLS = True
     MAIL_USERNAME = 'oluwaseunokunola@gmail.com'
-    MAIL_PASSWORD = 'peter14RE'
+    MAIL_PASSWORD = '12222222222'
