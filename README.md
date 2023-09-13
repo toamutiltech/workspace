@@ -27,7 +27,7 @@ Work on GitHub
 https://github.com/toamutiltech/workspace
 
 Blog
-https://intranet.alxswe.com/corrections/20089984/correct
+https://www.linkedin.com/pulse/working-workspace-oluwaseun-okunola
 
 ## Features
 
