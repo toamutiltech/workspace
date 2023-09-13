@@ -29,17 +29,17 @@ https://github.com/toamutiltech/workspace
 Blog
 https://intranet.alxswe.com/corrections/20089984/correct
 
-##Features
+## Features
 
 - Searching for space based on location.
 - Getting a workspace with facilities needed for a working environment, All Location comes with Infrastructure so you don't need to move to any location with any Infrastructure, just move you and your team.
 - Workspaces are offered for a short period, Rent a space based on your Budget no need for long-term commitments so it is cost-effective for short-term needs.
 - Individuals all over the world can register and start posting their available space for rent thereby making workspace available all over the world.
 
-##contributing
-Contributions are always welcome! Please read the [contribution guidelines](https://github.com/toamutiltech/workspace/contributing.md) first.
+## contributing
+Contributions are always welcome! Please read the [contribution guidelines](https://github.com/toamutiltech/workspace/blob/main/contributing.md) first.
 
-#license
+## license
 Workspace License
 
 Copyright (c) [2023] [Oluwasun Okunola]
@@ -51,62 +51,62 @@ to use, copy, modify, merge, publish, and to permit persons to whom the applicat
 furnished to do so.
 
 
-##usage
-
+## usage
+```bash
 #Initialize a New Git Repository:
 git init
-Use this command to start tracking a new project with Git.
+#Use this command to start tracking a new project with Git.
 
-#Clone a Remote Repository:
+#Clone Repository:
 git clone https://github.com/toamutiltech/workspace
-Clone an existing Git repository from a remote location (e.g., GitHub).
+#Clone an existing Git repository from a remote location (e.g., GitHub).
 
 #Check the Status of Your Repository:
 git status
-See the status of your current branch, including untracked, modified, and staged files.
+#See the status of your current branch, including untracked, modified, and staged files.
 
 #Add Changes to Staging Area:
 git add <file(s)>
-Stage changes for the next commit. Replace <file(s)> with the names of the files you want to stage.
+#Stage changes for the next commit. Replace <file(s)> with the names of the files you want to stage.
 
 #Commit Changes:
 git commit -m "Your commit message"
-Create a commit with the staged changes and include a descriptive message.
+#Create a commit with the staged changes and include a descriptive message.
 
 #Pull Changes from a Remote Repository:
 git pull
-Fetch changes from the remote repository and merge them into your current branch.
+#Fetch changes from the remote repository and merge them into your current branch.
 
 #Push Changes to a Remote Repository:
 git push
-Send your committed changes to the remote repository.
+#Send your committed changes to the remote repository.
 
 #Create a New Branch:
 git branch <branch_name>
-Create a new branch to work on a feature or bug fix.
+#Create a new branch to work on a feature or bug fix.
 
 #Switch to a Different Branch:
 git checkout <branch_name>
-Move to a different branch to continue working on it.
+#Move to a different branch to continue working on it.
 
 #Merge Branches:
 git merge <branch_name>
-Combine changes from one branch into another.
+#Combine changes from one branch into another.
 
 #View Commit History:
 git log
-Display a list of commits with their details, including commit messages and authors.
+#Display a list of commits with their details, including commit messages and authors.
 
 #Discard Local Changes:
 git checkout -- <file(s)>
-Discard changes in specific files to match the last committed state.
-
+#Discard changes in specific files to match the last committed state.
+```
 
 ## Getting Started
 
 Follow these steps to get started with our project:
 
-### 1. Clone the Repository
+### Clone the Repository
 
 To start working with this project, you'll need a local copy. Use the following command to clone the repository to your machine:
 
@@ -128,15 +128,14 @@ Configure your flask environment
 # Example commands for different languages or frameworks
 python run.py # For Python projects
 
-
-'''
-Explore and Contribute
+```
+### Explore and Contribute
 You're all set! Explore the project, make changes, and contribute back to the repository by following our contribution guidelines.
 
-Report Issues
+### Report Issues
 If you encounter any issues or have suggestions for improvements, please open an issue on our GitHub repository.
 
-Stay Updated
+### Stay Updated
 To stay up-to-date with the latest changes and announcements, watch our repository and subscribe to our notifications.
 
 Now you're ready to start using our project! Happy coding!
