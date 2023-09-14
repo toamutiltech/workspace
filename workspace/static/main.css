@@ -130,3 +130,9 @@ a.article-title:hover {
     color: white;
     text-align: center;
 }
+.search{
+  float: right;
+  padding: 1%;
+  background-color: white;
+  margin: 1%;
+}

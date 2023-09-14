@@ -62,3 +62,13 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('main.home'))
+
+@posts.route('/post/search', methods=['GET'])
+def search():
+    selected_country = request.args.get('country')
+    if selected_country:
+        posts = Post.query.filter_by(country=selected_country).all()
+    else:
+        posts = []
+    return render_template('search_results.html', posts=posts)
+

@@ -24,3 +24,12 @@ class PostForm(FlaskForm):
     description = TextAreaField('Description', validators=[DataRequired()])
     contact = TextAreaField('Contact', validators=[DataRequired()])
     submit = SubmitField('Post')
+
+#The form to Search space from the database
+class SearchForm(FlaskForm):
+    choices = [('Nigeria', 'Nigeria'), ('Argentina', 'Argentina'), 
+    ('Algeria', 'Algeria'), ('Benin', 'Benin'),('Brazil', 'Brazil'), 
+    ('Cuba', 'Cuba'),('United States', 'United States'),('United Kingdom', 'United Kingdom'),
+    ('Togo', 'Togo'),('South Africa', 'South Africa'),('Portugal', 'Portugal')]
+    country = SelectField('Select a Country', choices=choices)
+    submit = SubmitField('Post')

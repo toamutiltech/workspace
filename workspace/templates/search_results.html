@@ -1,0 +1,29 @@
+<!--
+  A page that contain all details of a posted space according to your search
+-->
+{% extends "layout.html" %}
+{% block content %}
+{% for post in posts %}
+  <article class="media content-section topbar">
+    <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
+        <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>      
+      </div>
+      <h2 class="article-title">{{ post.title }}</h2>
+      <img class="space-img" src="{{ url_for('static', filename='space_image/' + post.image) }}">
+  <p class="article-content">Price: ${{ post.price}}</p>
+      <p class="article-content">Address: {{ post.location }}</p>
+      <p class="article-content">Location: {{ post.country }}</p>
+      <p class="article-content">Size: {{ post.size }}</p>
+      <p class="article-content">Type: {{ post.space_type }}</p>
+      <p class="article-content">Space Size: {{ post.accommodation_size }}</p>
+      <p class="article-content">Facilities: {{ post.facility }}</p>
+      <p class="article-content">Availability: {{ post.availability }}</p>
+      <p class="article-content">Description: {{ post.description }}</p>
+      <p class="article-content">Contact: {{ post.contact }}</p>
+    </div>
+  </article>
+{% endfor %}
+{% endblock content %}
